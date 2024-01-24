@@ -2,5 +2,6 @@
 <html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org" layout:decorate="~{base}" lang="en">
 <title layout:fragment="title">Hello!</title>
 <div layout:fragment="content">
-    <p>Hello!</p>
+    <p>Hello! My String is: [[${((someData != null)? someData.aString : 'someData is null')}]]</p>
+    <a href="/form">someForm</a>
 </div>
