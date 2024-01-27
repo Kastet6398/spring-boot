@@ -1,4 +1,4 @@
-async function apiCallText(method, url, callback) {
+function apiCallText(method, url, callback) {
     fetch(url, {
         method: method,
         headers: {
@@ -12,7 +12,7 @@ async function apiCallText(method, url, callback) {
     ).then(callback);
 }
 
-async function apiCallJson(method, url, callback) {
+function apiCallJson(method, url, callback) {
     fetch(url, {
         method: method,
         headers: {
