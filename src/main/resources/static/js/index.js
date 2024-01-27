@@ -8,3 +8,5 @@ function read() {
         document.getElementById('number').innerText = text;
     });
 }
+
+read();

@@ -1,10 +1,6 @@
 function apiCallText(method, url, callback) {
     fetch(url, {
-        method: method,
-        headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }
+            method: method
         }
     ).then((response) => {
             return response.text();
@@ -14,11 +10,7 @@ function apiCallText(method, url, callback) {
 
 function apiCallJson(method, url, callback) {
     fetch(url, {
-        method: method,
-        headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }
+            method: method
         }
     ).then((response) => {
             return response.json();
