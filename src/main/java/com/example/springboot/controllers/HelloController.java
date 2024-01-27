@@ -33,6 +33,10 @@ public class HelloController {
         model.addAttribute("person", person);
         return "greeting";
     }
+    @GetMapping("/index")
+    public String getIndex() {
+        return "index";
+    }
 
     @GetMapping("/person")
     public String showForm(Model model) {
