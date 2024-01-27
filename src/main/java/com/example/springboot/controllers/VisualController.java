@@ -1,17 +1,21 @@
 package com.example.springboot.controllers;
 
-import com.example.springboot.models.BaseModel;
-import com.example.springboot.models.MessageModel;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 @Controller
 public class VisualController {
+    private int a;
     @GetMapping("/")
-    public String index() {
+    public String index(Model model) {
+        model.addAttribute("a", a);
         return "index";
+    }
+    @PostMapping("/")
+    public String indexPost() {
+        a++;
+        return "redirect:/";
     }
 }

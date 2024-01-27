@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{base}" lang="en">
-<title layout:fragment="title">Index</title>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Index</title>
+</head>
+<body>
+    <p th:text="${a}"></p>
 
-<div layout:fragment="content">
-    <div id="number"></div>
-    <button onclick="add()">Add +1!</button>
-    <button onclick="read()">Read!</button>
-
-    <script src="/js/index.js" defer></script>
-</div>
+    <form method="post">
+        <button>Add +1!</button>
+    </form>
+</body>
 
 </html>
